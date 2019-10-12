@@ -19,4 +19,11 @@ public class Prostokat extends Figura {
     public double obliczObwod() {
         return 2 * bokA + 2 * bokB;
     }
+
+    @Override
+    public String toString() {
+        return "Jestem prostokatem o wymiarach: " + bokA + " x " + bokB;
+    }
+
+
 }

@@ -34,7 +34,26 @@ public class TablicaFigurProgram {
         // tworzymy 6-elementowa tablice Figur
         Figura[] mojeFigury = new Figura[6];
 
+        // wstawiamy figury do tablicy
+        mojeFigury[0] = k1;
+        mojeFigury[1] = k2;
+        mojeFigury[2] = p1;
+        mojeFigury[3] = p2;
+        mojeFigury[4] = kw1;
+        mojeFigury[5] = kw2;
 
+
+        // iterujemy przez tablice figur
+        // zwroc uwage, ze uzywam typu bazowego, czyli figura
+        // dzieki polimorizmowi podczas iteracji w petli nie ma znaczenia, czy f to kwadrat, kolo, prostokat
+        // wazne, ze kazda figura ma metode obliczPole i obliczObwod
+        for (Figura f : mojeFigury) {
+            System.out.println(f);
+            System.out.println("Pole to: " + f.obliczPole());
+            System.out.println("Obwod to: " + f.obliczObwod());
+            System.out.println();
+            System.out.println();
+        }
 
 
     }

@@ -16,4 +16,12 @@ public class Kolo extends Figura {
     public double obliczObwod() {
         return 2 * Math.PI * r;
     }
+
+
+    @Override
+    public String toString() {
+        return "Kolo{" +
+                "r=" + r +
+                '}';
+    }
 }

@@ -22,4 +22,11 @@ public class Kwadrat extends Figura {
     public double obliczObwod() {
         return 4 * bokA;
     }
+
+    @Override
+    public String toString() {
+        return "Kwadrat{" +
+                "bokA=" + bokA +
+                '}';
+    }
 }
