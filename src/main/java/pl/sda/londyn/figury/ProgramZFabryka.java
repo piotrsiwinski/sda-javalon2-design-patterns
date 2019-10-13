@@ -1,11 +1,12 @@
 package pl.sda.londyn.figury;
 
+import pl.sda.londyn.fabryka.FabrykaFigur;
+
 import java.util.Scanner;
 
-
-// stara wersja programu z figurami
-// bez uzycia wzorca fabryki
-public class Program {
+// nowa wersja programu z figurami
+// korzystajaca z wzorca fabryki
+public class ProgramZFabryka {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -23,31 +24,7 @@ public class Program {
         // decyzje o utworzeniu konkretnego typu podejmujemy dopiero w trakcie dzialania programu
         // w zaleznosci od wyboru uzytkownika, referencja "mojaFig" moze przyjac 1 z 3 roznych postaci
         // przyklad polimorfizmu
-        Figura mojaFig = null;
-        switch (wybor) {
-            case 1: {
-                System.out.println("Podaj bok kwadratu: ");
-                double bok = scanner.nextDouble();
-                mojaFig = new Kwadrat(bok);
-                break;
-            }
-            case 2: {
-                System.out.println("Podaj boki prostokata");
-                double bokA = scanner.nextDouble();
-                double bokB = scanner.nextDouble();
-                mojaFig = new Prostokat(bokA, bokB);
-                break;
-            }
-            case 3: {
-                System.out.println("Podaj promien okregu: ");
-                double promien = scanner.nextDouble();
-                mojaFig = new Kolo(promien);
-                break;
-            }
-            default: {
-                System.out.println("Zly wybor");
-            }
-        }
+        Figura mojaFig = FabrykaFigur.stworzFigure(wybor);
 
         if (mojaFig != null) {
 
