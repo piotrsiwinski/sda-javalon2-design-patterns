@@ -21,5 +21,6 @@ public class KaczkaMain {
 
         Kaczka gumowaKaczka = new GumowaKaczka();
         gumowaKaczka.wyswietl();
+
     }
 }

@@ -17,7 +17,7 @@ public class GumowaKaczka extends Kaczka {
     @Override
     public void wyswietl() {
         System.out.println("Jestem gumowa kaczka");
-        this.wykonajKwakanie();
+        wykonajKwakanie();
         this.wykonajLatanie();
     }
 }
